@@ -1,10 +1,12 @@
-# Node.js API from Scratch Using TypeScript, Express, and MongoDB
+# Playground: Node.js API from TypeScript, Express, and MongoDB
 
-## Source
+This is a modified repository containing the user creation and authenitication API using Node.js, Express, MongoDB and Javascript web tokens and implemented in Typescript
 
-YouTube tutorial:
+## API endpoints
 
-- [Node.js API From Scratch Using TypeScript, Express And MongoDB #1](https://youtu.be/1o9YOHeKhNQ?si=-F4ucjvj0Z8-hwRP)
-- [Node.js API From Scratch Using TypeScript, Express And MongoDB #2](https://youtu.be/FXzsv2BJLKs?si=4CQwPUVRAJlMEUbR)
-
-## Save Point
+| Path               | Description     | Method | Accepts               | Returns                                            |
+| :----------------- | :-------------- | :----- | :-------------------- | -------------------------------------------------- |
+| `/users`           | Base URL        | GET    |                       | Returns all users                                  |
+| `/users/:id`       | Individual User | Get    |                       | Returns User of a given ID                         |
+| `/users/register/` | Registration    | Post   | `{ email, password }` | Creates new user in database, returns user as JSON |
+| `/users/login`     | Login           | Post   | `{ email, password }` | JWT token                                          |
